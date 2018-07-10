@@ -1,0 +1,31 @@
+<!--
+  Generated template for the BusquedaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Resultados</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="regresar()">
+                regresar
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="alert alert-danger" role="alert" *ngIf="_ss.vacio">
+        No se encontraron resultados con el termino "{{ _ss.termino | lowercase}}"
+    </div>
+    <ion-list no-lines *ngIf="!_ss.vacio">
+        <button ion-item *ngFor="let analisis of _ss.analisis_filtrados" (click)="informacion( analisis.idx )">
+      {{ analisis.estudio }}
+    </button>
+    </ion-list>
+</ion-content>
