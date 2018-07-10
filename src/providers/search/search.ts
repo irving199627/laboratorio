@@ -19,31 +19,4 @@ export class SearchProvider {
   constructor( private db: AngularFireDatabase ) {
     
   }
-
-  bus( cod: string ) {
-    this.termino = cod.toUpperCase();
-    this.analisis_filtrados = [];
-      this.analisis.forEach( an => {
-        if ( an.estudio.indexOf( this.termino ) >= 0 ) {
-          this.analisis_filtrados.push(an);
-        }
-        console.log(this.analisis_filtrados);
-        if ( this.analisis_filtrados.length === 0 ) {
-          this.vacio = true;
-        } else {
-          this.vacio = false;
-        }
-      });
-  }
-
-  cargar () {
-    const promesa = new Promise( (resolve, reject ) => {
-      this.item = this.db.object('analisis').valueChanges();
-        this.item.forEach( datos => {
-            this.analisis = datos;
-            resolve();
-        });
-    });
-    return promesa;
-  }
 }
