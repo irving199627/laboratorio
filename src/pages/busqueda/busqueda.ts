@@ -25,11 +25,19 @@ export class BusquedaPage {
   }
 
   informacion( id:number ){
-    
+    this.items = this.db.object(`analisis/${id}`).valueChanges();
+    this.items.forEach(datos => {
+      this._ss.area = datos.area;
+      this._ss.entrega = datos.tiempoEntrega;
+      this._ss.estudio = datos.estudio;
+      this._ss.muestra = datos.muestra;
+    });
+    this.navCtrl.setRoot( InfoPage );
   }
 
   regresar(){
-    
+    this._ss.analisis = [];
+    this.navCtrl.setRoot(HomePage);
   }
 
   ionViewDidLoad() {

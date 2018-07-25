@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-    apiKey: 'AIzaSyARaX1A9aaMugsX6atajWmh_X9qEO4RlaU',
-    authDomain: 'laboratio-fdf48.firebaseapp.com',
-    databaseURL: 'https://laboratio-fdf48.firebaseio.com',
-    projectId: 'laboratio-fdf48',
-    storageBucket: 'laboratio-fdf48.appspot.com',
-    messagingSenderId: '569184250949'
+    apiKey: 'AIzaSyCOcYrvRYb64eioRbYrVGQr9E-ZOinV3iI',
+    authDomain: 'laboratorio-a24c2.firebaseapp.com',
+    databaseURL: 'https://laboratorio-a24c2.firebaseio.com',
+    projectId: 'laboratorio-a24c2',
+    storageBucket: 'laboratorio-a24c2.appspot.com',
+    messagingSenderId: '398406296156'
   };
